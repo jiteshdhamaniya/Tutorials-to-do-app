@@ -1,5 +1,5 @@
 {
-  "name": "invoice-creater",
+  "name": "to-do-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,14 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "shortid": "^2.2.15",
+    "tailwindcss": "^1.5.2"
   },
   "scripts": {
+    "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
